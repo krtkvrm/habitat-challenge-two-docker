@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package evaluation;
+ 
+service Environment{
+ rpc get_action_space(Package) returns (Package) {}
+}
+ 
+message Package{
+  bytes SerializedEntity = 1;
+}
